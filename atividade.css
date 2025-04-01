@@ -38,9 +38,9 @@ body {
 
 
 #gustavo {
-    width: 500px;
-    height: 200px;
-    font-size: 80px;
+    width: 200px;
+    height: 150px;
+    font-size: 25px;
     background: linear-gradient(blue, purple);
     color: white;
 }
@@ -54,5 +54,16 @@ body {
 }
 
 #matheus small{
+    color: white;
+}
+
+#lucas {
+    width: 200px;
+    height: 150px;
+    font-size: 25px;
+    background: linear-gradient(orange, coral);
+}
+
+#lucas small {
     color: white;
 }
