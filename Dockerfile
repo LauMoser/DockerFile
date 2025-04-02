@@ -1,9 +1,15 @@
-# Quem criou o arquivo
 FROM nginx:latest
 LABEL maintainer="Gustavo De Longhi <gustavodelonghi@gmail.com>"
 
-# Copia um novo index.html para a pasta padrão do Nginx
-COPY index.html /usr/share/nginx/html/index.html
+RUN apt-get update && \
+    apt-get install -y nginx && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* \
+    rm -rf /usr/share/nginx/html/index.html
 
-# Expõe a porta padrão do Nginx
+COPY atividade.html /usr/share/nginx/html/index.html
+
 EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
+
